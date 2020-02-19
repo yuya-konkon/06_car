@@ -53,37 +53,33 @@ class Car
 class Taxi extends Car {
   private $passenger;
 
-  public function setPickUp($PickUp)
-  {
-    $this->PickUp = $PickUp;
-  }
-  public function getPickUp()
-  {
-    return $this->PickUp;
-  }
-
-  public function setLower($Lower)
-  {
-    $this->Lower = $Lower;
-  }
-
-  public function getLower()
-  {
-    return $this->Lower;
-  }
-
   public function setPassenger($passenger)
   {
     $this->passenger = $passenger;
   }
+
   public function getPassenger()
   {
     return $this->passenger;
   }
 
+  public function pickUp($passenger) {
+    return $this->pickUp;
+  }
+
+  public function lower($passenger)
+  {
+    if ($this->pickUp - $this->Lower > 0){
+      $this->pickUp - $this->Lower;
+      echo $this->lower . '人降車しました。';
+    } else {
+      echo '降車人数に誤りがあります。';
+    }
+  }
+
   public function infomation()
   {
-    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->getPickUp() . '人です。<br>';
+    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->pickUp . '人です。<br>';
   }
 }
 
@@ -102,14 +98,15 @@ echo '<hr>';
 $taxi1 = new Taxi('クラウンのタクシー', 222, 'black');
 
 // 3人乗車
-$taxi1->setpickUp(3);
+$taxi1->pickUp(3);
 
+// タクシーの情報表示を表示
 echo $taxi1->infomation();
 echo '<br>';
 
 // 2人降車
-$taxi1->getlower(2);
+// $taxi1->lower(2);
 echo '<br>';
 
 // 一人降車
-$taxi1->getlower(2);
+// $taxi1->lower(2);
