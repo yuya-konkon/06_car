@@ -69,7 +69,7 @@ class Taxi extends Car {
 
   public function lower()
   {
-    if ($this->pickUp - $this->Lower > 0){
+    if ($this->passenger - $this->Lower > 0){
       $this->passenger - $this->Lower;
       echo $this->lower . '人降車しました。';
     } else {
@@ -79,7 +79,7 @@ class Taxi extends Car {
 
   public function infomation()
   {
-    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->pickUp() . '人です。<br>';
+    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->pickUp() . '人です。';
   }
 }
 
