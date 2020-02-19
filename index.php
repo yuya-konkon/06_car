@@ -105,7 +105,7 @@ echo $taxi1->infomation();
 echo '<br>';
 
 // 2人降車
-// $taxi1->lower(2);
+$taxi1->lower(2);
 echo '<br>';
 
 // 一人降車
