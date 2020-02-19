@@ -64,7 +64,7 @@ class Taxi extends Car {
   }
 
   public function pickUp() {
-    return $this->Passenger;
+    return $this->passenger + $this->pickUp;
   }
 
   public function lower()
