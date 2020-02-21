@@ -63,10 +63,12 @@ class Taxi extends Car {
     return $this->passenger;
   }
 
-  public function pickUp() {
-    return $this->passenger + $this->pickUp;
+  // 人を乗せる動作
+  public function PickUp() {
+    return $this->passenger + $this->PickUp;
   }
 
+  // 人を下ろす動作
   public function lower()
   {
     if ($this->passenger - $this->Lower > 0){
@@ -79,7 +81,7 @@ class Taxi extends Car {
 
   public function infomation()
   {
-    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->pickUp() . '人です。';
+    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->getPassenger() . '人です。';
   }
 }
 
