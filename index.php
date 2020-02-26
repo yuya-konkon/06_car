@@ -68,8 +68,8 @@ class Taxi extends Car
   // 人を下ろす動作
   public function lower($passenger)
   {
-    if ($this->passenger - $this->Lower > 0) {
-      $this->lower = $passenger;
+    if ($this->passenger - $passenger > 0) {
+      $this->passenger - $this->lower;
       echo $this->lower . '人降車しました。';
     } else {
       echo '降車人数に誤りがあります。';
@@ -108,4 +108,4 @@ $taxi1->lower(2);
 echo '<br>';
 
 // 一人降車
-$taxi1->lower(2);
+// $taxi1->lower(2);
