@@ -50,13 +50,9 @@ class Car
 }
 
 // 以下にCarクラスを継承したTaxiクラスを記述して下さい
-class Taxi extends Car {
+class Taxi extends Car
+{
   private $passenger;
-
-  public function setPassenger($passenger)
-  {
-    $this->passenger = $passenger;
-  }
 
   public function getPassenger()
   {
@@ -64,15 +60,16 @@ class Taxi extends Car {
   }
 
   // 人を乗せる動作
-  public function PickUp() {
-    return $this->passenger + $this->PickUp;
+  public function pickUp($passenger)
+  {
+    return $this->pickUp = $passenger;
   }
 
   // 人を下ろす動作
-  public function lower()
+  public function lower($passenger)
   {
-    if ($this->passenger - $this->Lower > 0){
-      $this->passenger - $this->Lower;
+    if ($this->passenger - $this->Lower > 0) {
+      $this->lower = $passenger;
       echo $this->lower . '人降車しました。';
     } else {
       echo '降車人数に誤りがあります。';
@@ -81,7 +78,7 @@ class Taxi extends Car {
 
   public function infomation()
   {
-    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->getPassenger() . '人です。';
+    echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->pickUp . '人です。';
   }
 }
 
