@@ -68,7 +68,7 @@ class Taxi extends Car
   // 人を下ろす動作
   public function lower($passenger)
   {
-    if ($this->passenger - $passenger > 0) {
+    if ($this->passenger - $passenger >= 0) {
       $this->passenger -= $passenger;
       echo $passenger . '人降車しました。';
     } else {
@@ -81,7 +81,6 @@ class Taxi extends Car
     echo '車の種類:' . $this->getName() . '、' . '車体番号:' . $this->getNumber() . '、' . 'カラー:' . $this->getColor() . '、乗車人数は' . $this->getPassenger() . '人です。';
   }
 }
-
 
 // 以下を実行した時にエラーがでないようにして下さい
 // Carクラスのインスタンスを生成
